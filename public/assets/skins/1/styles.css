@@ -1,0 +1,197 @@
+:root {
+  --accent: #ff83c2;
+  --icons: #f97686;
+  --bg: #feddee;
+  --progress-bar: 0%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  position: relative;
+  background-color: #fff;
+  height: 160px;
+  width: 85vw;
+  max-width: 400px;
+  -webkit-box-shadow: 0 4px 10px #f9768542;
+          box-shadow: 0 4px 10px #f9768542;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 1rem;
+}
+
+.bg {
+  position: absolute;
+  width: 100px;
+  height: 120%;
+  background-color: var(--accent);
+  left: -20px;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  z-index: -1;
+}
+
+.flex-item-1 {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1rem;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 150px;
+}
+
+.buttons {
+  color: var(--icons);
+  position: absolute;
+  top: 1.2rem;
+  left: -19px;
+  right: 0;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.download i, .like i {
+  background: #fff;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  font-size: 1.2em;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cover {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: red;
+  /* background-image: url("Lily.jpg"); */
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.flex-item-2 {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.info-holder {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.song {
+  font-size: 1.2em;
+}
+
+.artist {
+  color: #3b3b3b;
+  font-size: 0.7em;
+}
+
+.progress {
+  position: relative;
+  height: 1.5rem;
+}
+
+.duration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.6em;
+  color: var(--accent);
+}
+
+.bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  height: 2px;
+}
+
+.bar::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent);
+  height: 100%;
+  width: var(--progress-bar);
+}
+
+.bar::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  z-index: 1;
+  top: -3px;
+  left: var(--progress-bar);
+}
+
+.controls-holder {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.controls {
+  color: var(--accent);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pause {
+  font-size: 1.8em;
+  padding: 0 1rem;
+}
